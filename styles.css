@@ -38,7 +38,7 @@ body {
 ----------------------------------------------------------------------- */
 
 header {
-  background: #0f3460;     /* deep navy: corporate, trustworthy */
+  background: #0b502a;     /* deep green: corporate, trustworthy */
   color: #ffffff;
   padding: 3rem 1.5rem;    /* 3rem top+bottom, 1.5rem left+right */
   text-align: center;
@@ -79,7 +79,7 @@ main h2 {
 }
 
 footer {
-  background: #0f3460;
+  background: #0b502a;
   color: #c8d6f0;
   text-align: center;
   padding: 1.5rem;
