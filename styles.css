@@ -1,0 +1,87 @@
+/* ============================================================
+   Lesson 2: CSS - where the design lives.
+
+   HTML is the skeleton (structure). CSS is the skin (style).
+   This file is a list of RULES. Each rule looks like:
+
+       selector { property: value; }
+
+   The browser reads the file top to bottom.
+   If two rules target the same thing, the LATER one wins.
+   ============================================================ */
+
+/* --- The box model ------------------------------------------------
+   Every HTML element is a box, from the inside out:
+   content -> padding -> border -> margin
+   padding = space INSIDE the box (content pushes off the edges)
+   margin  = space OUTSIDE the box (pushes neighbors away)
+------------------------------------------------------------------- */
+
+/* border-box: makes "width" mean the WHOLE box, not just the content.
+   Without this line, adding padding breaks layouts.
+   Every real-world project starts with this. */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;  /* browsers add ~8px default margin; we want OUR rules to decide */
+  /* system font stack: no font file to download (fast!), looks native on Windows/Mac */
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+  color: #1a1a2e;      /* near-black with a hint of navy - softer than pure #000 */
+  line-height: 1.6;    /* breathing room between lines of text */
+}
+
+/* --- Element selectors ------------------------------------------------
+   "header { }" targets EVERY <header> tag on the page.
+   Great for small pages. Bigger sites use classes (see below).
+----------------------------------------------------------------------- */
+
+header {
+  background: #0f3460;     /* deep navy: corporate, trustworthy */
+  color: #ffffff;
+  padding: 3rem 1.5rem;    /* 3rem top+bottom, 1.5rem left+right */
+  text-align: center;
+}
+
+/* "rem" = relative to the browser's base font size (usually 16px).
+   So 3rem = 48px. Using rem keeps spacing proportional if the
+   user zooms the page - an accessibility win. */
+header h1 {
+  margin: 0 0 0.25rem;     /* tiny gap between the name and the tagline */
+  font-size: 2.25rem;
+}
+
+header p {
+  margin: 0;
+  color: #c8d6f0;              /* softened white - quieter than pure #fff */
+  text-transform: uppercase;   /* ALL CAPS without retyping the HTML */
+  letter-spacing: 0.15em;      /* spread the letters: classic brand feel */
+}
+
+/* --- A class selector ---------------------------------------------------
+   ".container" targets any element with class="container".
+   Classes are reusable: one definition, many users.
+   This is THE most common layout pattern in web development.
+------------------------------------------------------------------------- */
+.container {
+  max-width: 42rem;   /* ~67 characters per line = comfortable reading width */
+  margin: 0 auto;     /* auto left+right margins = centered. The #1 centering trick */
+  padding: 0 1.5rem;  /* never let text touch screen edges on phones */
+}
+
+main {
+  padding: 3rem 0;
+}
+
+main h2 {
+  margin-top: 0;
+}
+
+footer {
+  background: #0f3460;
+  color: #c8d6f0;
+  text-align: center;
+  padding: 1.5rem;
+  font-size: 0.875rem;   /* slightly smaller: footers whisper */
+}

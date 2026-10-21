@@ -12,6 +12,9 @@
   <meta name="description" content="Alif Digital builds fast, search-friendly websites for corporate clients. Web design, development, and maintenance.">
   <!-- title: the browser tab name AND the Google search headline. Keep under 60 characters. -->
   <title>Alif Digital | Corporate Web Solutions</title>
+  <!-- link: attaches our CSS file. rel says WHAT it is, href says WHERE.
+       Put it in <head> so styles load before the page renders. -->
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <!-- header: the top of the page. Logo + navigation live here. -->
@@ -22,21 +25,25 @@
 
   <!-- main: the actual content of the page. One per page. -->
   <main>
-    <h2>Websites that work as hard as you do</h2>
-    <p>
-      Fast, secure, search-optimized websites for corporate clients.
-      Built with modern tools, versioned with Git, deployed automatically.
-    </p>
-    <p>This is your first real web page. It is live on the internet because you put it there.</p>
+    <!-- the container wrapper: centers everything inside it.
+         Open styles.css and find ".container" to see how. -->
+    <div class="container">
+      <h2>Websites that work as hard as you do</h2>
+      <p>
+        Fast, secure, search-optimized websites for corporate clients.
+        Built with modern tools, versioned with Git, deployed automatically.
+      </p>
+      <p>This is your first real web page. It is live on the internet because you put it there.</p>
 
-    <!-- An unordered list: ul is the list, each li is one item.
-         Search engines read these as distinct services you offer. -->
-    <h2>Services</h2>
-    <ul>
-      <li>Corporate website design and development</li>
-      <li>Technical SEO and performance optimization</li>
-      <li>Website maintenance and hosting management</li>
-    </ul>
+      <!-- An unordered list: ul is the list, each li is one item.
+           Search engines read these as distinct services you offer. -->
+      <h2>Services</h2>
+      <ul>
+        <li>Corporate website design and development</li>
+        <li>Technical SEO and performance optimization</li>
+        <li>Website maintenance and hosting management</li>
+      </ul>
+    </div>
   </main>
 
   <!-- footer: copyright, contact links, the boring-but-necessary stuff. -->
